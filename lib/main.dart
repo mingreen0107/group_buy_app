@@ -1,6 +1,9 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'package:group_buy_app/firebase_options.dart';
 import 'package:group_buy_app/screens/serach_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'firebase_options.dart';
 
 import './screens/splash_screen.dart';
 import './screens/board_screen.dart';
@@ -15,7 +18,13 @@ import './providers/auth.dart';
 import './providers/boards.dart';
 import './providers/notifications.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+      options: DefaultFirebaseOptions.currentPlatform
+  );
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
