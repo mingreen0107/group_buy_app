@@ -4,7 +4,6 @@ import 'package:group_buy_app/screens/serach_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'firebase_options.dart';
-
 import './screens/splash_screen.dart';
 import './screens/board_screen.dart';
 import './screens/auth_screen.dart';
